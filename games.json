@@ -1,0 +1,65 @@
+[
+    {
+        "code": "gen1",
+        "name": "Gen 1",
+        "games": ["Red", "Blue", "Green","Yellow"],
+        "types": 16,
+        "maxpkm": 151
+    },
+    {
+        "code": "gen2",
+        "name": "Gen 2",
+        "games": ["Gold", "Silver", "Crystal"],
+        "types": 17,
+        "maxpkm": 251 
+    },
+    {
+        "code": "gen3",
+        "name": "Gen 3",
+        "games": ["Ruby", "Sapphire", "Emerald", "Firered", "Leafgreen"],
+        "types": 17,
+        "maxpkm": 386
+    },
+    {
+        "code": "gen4",
+        "name": "Gen 4",
+        "games": ["Diamond", "Pearl", "Platinum", "HeartGold", "SoulSilver"],
+        "types": 17,
+        "maxpkm": 493
+    },
+    {
+        "code": "gen5",
+        "name": "Gen 5",
+        "games": ["Black", "White", "Black 2", "White 2"],
+        "types": 17,
+        "maxpkm": 649
+    },
+    {
+        "code": "gen6",
+        "name": "Gen 6",
+        "games": ["X", "Y", "Omega Ruby", "Alpha Sapphire"],
+        "types": 18,
+        "maxpkm": 721
+    },
+    {
+        "code": "gen7",
+        "name": "Gen 7",
+        "games": ["Sun", "Moon", "Ultra Sun", "Ultra Moon"],
+        "types": 18,
+        "maxpkm": 809
+    },
+    {
+        "code": "gen8",
+        "name": "Gen 8",
+        "games": ["Sword", "Shield", "Brilliant Diamond", "Shining Pearl"],
+        "types": 18,
+        "maxpkm": 905
+    },
+    {
+        "code": "gen9",
+        "name": "Gen 9",
+        "games": ["Scarlet","Violet"],
+        "types": 18,
+        "maxpkm": 1015
+    }
+]

@@ -62,7 +62,8 @@ function init() {
 
                 
                 pokebutton1.addEventListener('click', e=> {
-                    let rp1 = Math.floor(Math.random() * ind.maxpkm + 1);
+                    let rp1 = generaterandpoke(ind.maxpkm,randtype1)
+                    console.log(rp1);
                     typecheck(rp1,nametype,ind.maxpkm);
                     fetch("https://pokeapi.co/api/v2/pokemon/" + rp1)
                     .then(response => response.json()) 
@@ -106,12 +107,16 @@ function init() {
 }
 
 function generaterandpoke (max, type) {
-    let rp1 = Math.floor(Math.random() * max);
-    fetch("https://pokeapi.co/api/v2/pokemon/" + rp1)
-        .then(response => response.json()) 
-        .then(data => {
-            
+    let genpoke = {};
+    while(genpoke.type != type){
+        let rp1 = Math.floor(Math.random() * max + 1);
+        fetch("https://pokeapi.co/api/v2/pokemon/" + rp1)
+            .then(response => response.json()) 
+            .then(data => {
+                data = genpoke
         })
+    }
+    return genpoke;
 }
 
 // function typecheck (dex,randtype, max) {

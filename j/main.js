@@ -56,7 +56,7 @@ function init() {
                 let typepool = [];
                 let filteredmon1;
                 let mymons1 = [];
-                //typecontain.innerHTML = '';
+                
                 typecontain.appendChild(typedisplay1);
                 
                 fetch("https://pokeapi.co/api/v2/type/" + randtype1)
@@ -102,12 +102,18 @@ function init() {
                 let ttext = document.querySelector('.type2');
                 let randtype2 = "";
                 randtype2 = myTypes[type2n];
+                let typedisplay2 = document.getElementById("typepic2");
+                typedisplay2.src = 'i/' + randtype2 + ".png";
+                typedisplay2.classList.remove("hide");
+                const typecontain2 = document.getElementById('holdtype2');
                 ttext.innerText = randtype2;
                 let typesize = 0
                 const pokebutton2 = document.getElementById("p2");
                 let typepool = [];
                 let filteredmon2;
                 let mymons2 = [];
+
+                typecontain2.appendChild(typedisplay2);
                 
                 fetch("https://pokeapi.co/api/v2/type/" + randtype2)
                 .then(response => response.json()) 
@@ -152,6 +158,10 @@ function init() {
                 let ttext = document.querySelector('.type3');
                 let randtype3 = "";
                 randtype3 = myTypes[type3n];
+                let typedisplay3 = document.getElementById("typepic3");
+                typedisplay3.src = 'i/' + randtype3 + ".png";
+                typedisplay3.classList.remove("hide");
+                const typecontain3 = document.getElementById('holdtype3');
                 ttext.innerText = randtype3;
                 let typesize3 = 0
                 const pokebutton3 = document.getElementById("p3");
@@ -159,6 +169,8 @@ function init() {
                 let filteredmon3;
                 let mymons3 = [];
                 
+                typecontain3.appendChild(typedisplay3);
+
                 fetch("https://pokeapi.co/api/v2/type/" + randtype3)
                 .then(response => response.json()) 
                 .then(data =>{
@@ -185,10 +197,10 @@ function init() {
                         pokesprite3.classList.remove('hide');
                         pokesprite3.src = data.sprites.front_default;
                         pokesprite3.className = "thirdsprite";
-                        const secondpokecontainer = document.getElementById("poke3container");
+                        const thirdpokecontainer = document.getElementById("poke3container");
                         thirdpokecontainer.innerHTML = "";
     
-                        thirdcontainer.appendChild(pokesprite3);
+                        thirdpokecontainer.appendChild(pokesprite3);
                         thirdpokecontainer.appendChild(start3name);
     
                         

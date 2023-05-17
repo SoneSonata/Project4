@@ -56,9 +56,9 @@ function init() {
                 .then(data =>{
                     typesize = data.pokemon.length;
                     typepool = data.pokemon;
-                    mymons1 = filltype(typepool);
-                    console.log("compare",typepool,mymons1)
-                    filteredmon1 = filtermons(mymons1,ind.maxpkm);
+                    //mymons1 = filltype(typepool);
+                    //console.log("compare",typepool,mymons1)
+                    //filteredmon1 = filtermons(mymons1,ind.maxpkm);
                 });
                 
 

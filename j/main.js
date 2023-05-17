@@ -46,12 +46,18 @@ function init() {
                 let ttext = document.querySelector('.type1');
                 let randtype1 = "";
                 randtype1 = myTypes[type1n];
+                let typedisplay1 = document.getElementById("typepic1");
+                typedisplay1.src = 'i/' + randtype1 + ".png";
+                typedisplay1.classList.remove("hide");
+                const typecontain = document.getElementById('holdtype1');
                 ttext.innerText = randtype1;
                 let typesize = 0
                 const pokebutton1 = document.getElementById("p1");
                 let typepool = [];
                 let filteredmon1;
                 let mymons1 = [];
+                //typecontain.innerHTML = '';
+                typecontain.appendChild(typedisplay1);
                 
                 fetch("https://pokeapi.co/api/v2/type/" + randtype1)
                 .then(response => response.json()) 

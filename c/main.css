@@ -1,5 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#maincontain {
+    text-align: center;
+}
+
+h1 {
+    font-size:  40pt;
+}
+
+form {
+    margin: 1rem;
+    font-size: 25pt;
+}
+
+div {
+    margin: 2rem
+}
+
+section {
+    margin: 1rem;
+}
+
+label {
+    font-size: 25pt;
+}
+
 #poke1,#poke2,#poke3{
-    display: inline-block;
+    display: block;
     text-transform: capitalize;
 }
 

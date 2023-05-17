@@ -9,41 +9,58 @@
     <link rel="stylesheet" href="c/main.css">
 </head>
 <body>
-    <form>
-        <label for="gen">Generation: </label> 
-        <select name="gen" id="gen">
-            <option value="" selected>Select a generation</option> 
-        </select>
-    </form>
-    <section>
-        <button id="t1">Type 1</button>
-        <p class="type1"></p>
-    </section>
-    <button id = "p1">Generate Starter</button>
-    <section id="poke1container">
-        
-        <h3 id="poke1"></h3>
-        <img id="pokepic1" class="hide" src="" alt="">
-    </section>
-    <section>
-        <button id="t2">Type 2</button>
-        <p class="type2"></p>
-    </section>
-    <button id = "p2">Generate Starter</button>
-    <section id="poke2container">
-        
-        <h3 id="poke2"></h3>
-        <img id="pokepic2" class="hide" src="" alt="">
-    </section>
-    <section>
-        <button id="t3">Type 3</button>
-        <p class="type3"></p>
-    </section>
-    <button id = "p3">Generate Starter</button>
-    <section id="poke3container">
-        
-        <h3 id="poke3"></h3>
-        <img id="pokepic3" class="hide" src="" alt="">
-    </section>
+    <figure id="maincontain">
+        <img src="i/pokemonlogoc.png" class="title pic" alt="">
+        <h1>Type Randomizer</h1>
+        <form>
+            <label for="gen">Generation: </label> 
+            <select name="gen" id="gen">
+                <option value="" selected>Select a generation</option> 
+            </select>
+        </form>
+
+        <div id="box1">
+            <button id="t1">Type 1</button>
+            <section id="holdtype1">
+                <img id="typepic1" class="hide" src="" alt="">
+                <p class="type1"></p>
+            </section>
+            <button id = "p1">Generate Starter</button>
+            <section id="poke1container">
+                
+                <h3 id="poke1"></h3>
+                <img id="pokepic1" class="hide" src="" alt="">
+            </section>
+        </div>
+
+        <div id="box2">
+            <button id="t2">Type 2</button>
+            <section id="holdtype2">
+                <img id="typepic2" class="hide" src="" alt="">
+                <p class="type2"></p>
+            </section>
+            <button id = "p2">Generate Starter</button>
+            <section id="poke2container">
+                
+                <h3 id="poke2"></h3>
+                <img id="pokepic2" class="hide" src="" alt="">
+            </section>
+        </div>
+
+        <div id="box3">
+            <button id="t3">Type 3</button>
+            <section id="holdtype3">
+                <img id="typepic3" class="hide" src="" alt="">
+                <p class="type3"></p>
+            </section>
+            <button id = "p3">Generate Starter</button>
+            <section id="poke3container">
+                
+                <h3 id="poke3"></h3>
+                <img id="pokepic3" class="hide" src="" alt="">
+            </section>
+        </div>
+
+    </figure>
 </body>
 </html>

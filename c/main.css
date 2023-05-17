@@ -1,13 +1,17 @@
-#poke1{
-    display: block;
+#poke1,#poke2,#poke3{
+    display: inline-block;
     text-transform: capitalize;
 }
 
-.type1{
+.type1,.type2,.type3{
     text-transform: capitalize;
 }
 
-#pokepic1{
+#pokepic1,#pokepic2,#pokepic3{
     height: 200px;
     width: 200px;
+}
+
+.hide {
+    display: none;
 }

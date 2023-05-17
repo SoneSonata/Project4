@@ -6,3 +6,8 @@
 .type1{
     text-transform: capitalize;
 }
+
+#pokepic1{
+    height: 200px;
+    width: 200px;
+}

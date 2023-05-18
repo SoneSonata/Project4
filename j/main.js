@@ -62,15 +62,18 @@ function init() {
                 .then(data =>{
                     typesize = data.pokemon.length;
                     typepool = data.pokemon;
-                    mymons1 = filltype(typepool);
-                    filteredmon1 = filtermons(mymons1,ind.maxpkm);
+                    mymons1 = filltype(typepool,ind.maxpkm);
+                    //filteredmon1 = filtermons(mymons1,ind.maxpkm);
+                    console.table("check",mymons1);
                 });
+                
                 
 
                 
                 pokebutton1.addEventListener('click', e=> {
-                    let rp1 = Math.floor(Math.random() * typesize);
-                    randpoke1 = typepool[rp1].pokemon.name;
+                    let rp1 = Math.floor(Math.random() * mymons1.monarray.length);
+                    randpoke1 = mymons1.monarray[rp1].pokemon;
+                    console.log(randpoke1);
                     fetch("https://pokeapi.co/api/v2/pokemon/" + randpoke1)
                     .then(response => response.json()) 
                     .then(data => {
@@ -211,16 +214,24 @@ function init() {
 
 
 function filltype (mons,max){
-    let typemons = [];
+    let typemons = {monarray:[]};
     let tr = {};
+    console.log("here", mons)
     mons.forEach(mon => {
         fetch("https://pokeapi.co/api/v2/pokemon/" + mon.pokemon.name)
         .then(response => response.json()) 
         .then(data => {
-            typemons.push(data);
+            if(data.id <= max){
+            console.log("t1",typemons)
+            typemons.monarray.push(data);
+            console.log("t2",typemons)
+            }
+            
         });
+
     });
     return typemons;
+    
 }
 
 function filtermons (mons,max){
@@ -228,9 +239,7 @@ function filtermons (mons,max){
     let i;
     console.log("mon", mons);
     mons.forEach(item => {
-        let place = {};
-        place = item;
-        if(place.id <= max){
+        if(item.id <= max){
             genlist.push(place);
         }
     });

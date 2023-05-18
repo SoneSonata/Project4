@@ -19,8 +19,6 @@ function init() {
     });
 
     gen.addEventListener('change', (e) => {
-        console.log(gen.value);
-        console.log(arc);
         const code = e.target.value;
         arc.forEach(gen => {
             if(gen.code === code){
@@ -65,7 +63,6 @@ function init() {
                     typesize = data.pokemon.length;
                     typepool = data.pokemon;
                     mymons1 = filltype(typepool);
-                    //console.log("compare",typepool,mymons1)
                     filteredmon1 = filtermons(mymons1,ind.maxpkm);
                 });
                 
@@ -77,8 +74,6 @@ function init() {
                     fetch("https://pokeapi.co/api/v2/pokemon/" + randpoke1)
                     .then(response => response.json()) 
                     .then(data => {
-                        console.log(data.order);
-                        console.log(data.species.name);
                         let start1name = document.getElementById("poke1");
                         start1name.textContent = data.species.name;
                         let pokesprite1 = document.getElementById("pokepic1");
@@ -121,7 +116,6 @@ function init() {
                     typesize = data.pokemon.length;
                     typepool = data.pokemon;
                     mymons2 = filltype(typepool);
-                    //console.log("compare",typepool,mymons2)
                     filteredmon2 = filtermons(mymons2,ind.maxpkm);
                 });
                 
@@ -133,8 +127,6 @@ function init() {
                     fetch("https://pokeapi.co/api/v2/pokemon/" + randpoke2)
                     .then(response => response.json()) 
                     .then(data => {
-                        console.log(data.order);
-                        console.log(data.species.name);
                         let start2name = document.getElementById("poke2");
                         start2name.textContent = data.species.name;
                         let pokesprite2 = document.getElementById("pokepic2");
@@ -177,7 +169,6 @@ function init() {
                     typesize = data.pokemon.length;
                     typepool = data.pokemon;
                     mymons3 = filltype(typepool3);
-                    //console.log("compare",typepool,mymons3)
                     filteredmon3 = filtermons(mymons3,ind.maxpkm);
                 });
                 
@@ -189,8 +180,6 @@ function init() {
                     fetch("https://pokeapi.co/api/v2/pokemon/" + randpoke3)
                     .then(response => response.json()) 
                     .then(data => {
-                        console.log(data.order);
-                        console.log(data.species.name);
                         let start3name = document.getElementById("poke3");
                         start3name.textContent = data.species.name;
                         let pokesprite3 = document.getElementById("pokepic3");

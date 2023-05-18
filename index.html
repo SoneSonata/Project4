@@ -8,17 +8,20 @@
     <script src="j/main.js"></script>
     <link rel="stylesheet" href="c/main.css">
 </head>
+<header>
+    <figure id="heading">
+        <img src="i/pokemonlogoc.png" class="titlepic" alt="">
+            <h1>Type Randomizer</h1>
+            <form>
+                <label for="gen">Generation: </label> 
+                <select name="gen" id="gen">
+                    <option value="" selected>Select a generation</option> 
+                </select>
+            </form>
+    </figure>
+</header>
 <body>
     <figure id="maincontain">
-        <img src="i/pokemonlogoc.png" class="title pic" alt="">
-        <h1>Type Randomizer</h1>
-        <form>
-            <label for="gen">Generation: </label> 
-            <select name="gen" id="gen">
-                <option value="" selected>Select a generation</option> 
-            </select>
-        </form>
-
         <div id="box1">
             <button id="t1">Type 1</button>
             <section id="holdtype1">
